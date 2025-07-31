@@ -1,0 +1,1034 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Proyecto OilyGiant - Extracción de petróleo &#8212; Extracción de petróleo</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Descripción de datos" href="descripcion_datos.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Extracción de petróleo - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Extracción de petróleo - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introducción
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="descripcion_datos.html">Descripción de datos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Proyecto OilyGiant - Extracción de petróleo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Proyecto OilyGiant - Extracción de petróleo</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="proyecto-oilygiant-extraccion-de-petroleo">
+<h1>Proyecto OilyGiant - Extracción de petróleo<a class="headerlink" href="#proyecto-oilygiant-extraccion-de-petroleo" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importar librerias</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">root_mean_squared_error</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cargar los datos</span>
+<span class="n">data0</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/geo_data_0.csv&#39;</span><span class="p">)</span>
+<span class="n">data1</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/geo_data_1.csv&#39;</span><span class="p">)</span>
+<span class="n">data2</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/geo_data_2.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Analizar datos del primer conjunto</span>
+<span class="n">data0</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="n">data0</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 100000 entries, 0 to 99999
+Data columns (total 5 columns):
+ #   Column   Non-Null Count   Dtype  
+---  ------   --------------   -----  
+ 0   id       100000 non-null  object 
+ 1   f0       100000 non-null  float64
+ 2   f1       100000 non-null  float64
+ 3   f2       100000 non-null  float64
+ 4   product  100000 non-null  float64
+dtypes: float64(4), object(1)
+memory usage: 3.8+ MB
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+      <th>product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>txEyH</td>
+      <td>0.705745</td>
+      <td>-0.497823</td>
+      <td>1.221170</td>
+      <td>105.280062</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2acmU</td>
+      <td>1.334711</td>
+      <td>-0.340164</td>
+      <td>4.365080</td>
+      <td>73.037750</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>409Wp</td>
+      <td>1.022732</td>
+      <td>0.151990</td>
+      <td>1.419926</td>
+      <td>85.265647</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>iJLyR</td>
+      <td>-0.032172</td>
+      <td>0.139033</td>
+      <td>2.978566</td>
+      <td>168.620776</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Xdl7t</td>
+      <td>1.988431</td>
+      <td>0.155413</td>
+      <td>4.751769</td>
+      <td>154.036647</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Analizar datos del segundo conjunto</span>
+<span class="n">data1</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="n">data1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 100000 entries, 0 to 99999
+Data columns (total 5 columns):
+ #   Column   Non-Null Count   Dtype  
+---  ------   --------------   -----  
+ 0   id       100000 non-null  object 
+ 1   f0       100000 non-null  float64
+ 2   f1       100000 non-null  float64
+ 3   f2       100000 non-null  float64
+ 4   product  100000 non-null  float64
+dtypes: float64(4), object(1)
+memory usage: 3.8+ MB
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+      <th>product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>kBEdx</td>
+      <td>-15.001348</td>
+      <td>-8.276000</td>
+      <td>-0.005876</td>
+      <td>3.179103</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>62mP7</td>
+      <td>14.272088</td>
+      <td>-3.475083</td>
+      <td>0.999183</td>
+      <td>26.953261</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>vyE1P</td>
+      <td>6.263187</td>
+      <td>-5.948386</td>
+      <td>5.001160</td>
+      <td>134.766305</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>KcrkZ</td>
+      <td>-13.081196</td>
+      <td>-11.506057</td>
+      <td>4.999415</td>
+      <td>137.945408</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AHL4O</td>
+      <td>12.702195</td>
+      <td>-8.147433</td>
+      <td>5.004363</td>
+      <td>134.766305</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Analizar datos del tercer conjunto</span>
+<span class="n">data2</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="n">data2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 100000 entries, 0 to 99999
+Data columns (total 5 columns):
+ #   Column   Non-Null Count   Dtype  
+---  ------   --------------   -----  
+ 0   id       100000 non-null  object 
+ 1   f0       100000 non-null  float64
+ 2   f1       100000 non-null  float64
+ 3   f2       100000 non-null  float64
+ 4   product  100000 non-null  float64
+dtypes: float64(4), object(1)
+memory usage: 3.8+ MB
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+      <th>product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>fwXo0</td>
+      <td>-1.146987</td>
+      <td>0.963328</td>
+      <td>-0.828965</td>
+      <td>27.758673</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>WJtFt</td>
+      <td>0.262778</td>
+      <td>0.269839</td>
+      <td>-2.530187</td>
+      <td>56.069697</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ovLUW</td>
+      <td>0.194587</td>
+      <td>0.289035</td>
+      <td>-5.586433</td>
+      <td>62.871910</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>q6cA6</td>
+      <td>2.236060</td>
+      <td>-0.553760</td>
+      <td>0.930038</td>
+      <td>114.572842</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>WPMUX</td>
+      <td>-0.515993</td>
+      <td>1.716266</td>
+      <td>5.899011</td>
+      <td>149.600746</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Identificar valores duplicados</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valores duplicados de geo_data_0: &quot;</span><span class="p">,</span> <span class="n">data0</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valores duplicados de geo_data_1: &quot;</span><span class="p">,</span> <span class="n">data1</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valores duplicados de geo_data_2: &quot;</span><span class="p">,</span> <span class="n">data2</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valores duplicados de geo_data_0:  0
+Valores duplicados de geo_data_1:  0
+Valores duplicados de geo_data_2:  0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">preparar_datos</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;product&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;product&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">features</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">df</span>
+
+<span class="c1"># Cargar datos de las tres regiones</span>
+<span class="n">features_0</span><span class="p">,</span> <span class="n">target_0</span><span class="p">,</span> <span class="n">df_0</span> <span class="o">=</span> <span class="n">preparar_datos</span><span class="p">(</span><span class="s1">&#39;datasets/geo_data_0.csv&#39;</span><span class="p">)</span>
+<span class="n">features_1</span><span class="p">,</span> <span class="n">target_1</span><span class="p">,</span> <span class="n">df_1</span> <span class="o">=</span> <span class="n">preparar_datos</span><span class="p">(</span><span class="s1">&#39;datasets/geo_data_1.csv&#39;</span><span class="p">)</span>
+<span class="n">features_2</span><span class="p">,</span> <span class="n">target_2</span><span class="p">,</span> <span class="n">df_2</span> <span class="o">=</span> <span class="n">preparar_datos</span><span class="p">(</span><span class="s1">&#39;datasets/geo_data_2.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">train_and_evaluate_model</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_valid</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_valid</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">12345</span><span class="p">)</span>
+    
+    <span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_valid</span><span class="p">)</span>
+    <span class="n">rmse</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_valid</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
+    <span class="n">mean_pred</span> <span class="o">=</span> <span class="n">predictions</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">model</span><span class="p">,</span> <span class="n">predictions</span><span class="p">,</span> <span class="n">y_valid</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">rmse</span><span class="p">,</span> <span class="n">mean_pred</span>
+
+<span class="c1"># Entrenar los modelos</span>
+<span class="n">model_0</span><span class="p">,</span> <span class="n">preds_0</span><span class="p">,</span> <span class="n">valid_0</span><span class="p">,</span> <span class="n">rmse_0</span><span class="p">,</span> <span class="n">mean_pred_0</span> <span class="o">=</span> <span class="n">train_and_evaluate_model</span><span class="p">(</span><span class="n">features_0</span><span class="p">,</span> <span class="n">target_0</span><span class="p">)</span>
+<span class="n">model_1</span><span class="p">,</span> <span class="n">preds_1</span><span class="p">,</span> <span class="n">valid_1</span><span class="p">,</span> <span class="n">rmse_1</span><span class="p">,</span> <span class="n">mean_pred_1</span> <span class="o">=</span> <span class="n">train_and_evaluate_model</span><span class="p">(</span><span class="n">features_1</span><span class="p">,</span> <span class="n">target_1</span><span class="p">)</span>
+<span class="n">model_2</span><span class="p">,</span> <span class="n">preds_2</span><span class="p">,</span> <span class="n">valid_2</span><span class="p">,</span> <span class="n">rmse_2</span><span class="p">,</span> <span class="n">mean_pred_2</span> <span class="o">=</span> <span class="n">train_and_evaluate_model</span><span class="p">(</span><span class="n">features_2</span><span class="p">,</span> <span class="n">target_2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RMSE región 0:&quot;</span><span class="p">,</span> <span class="n">rmse_0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RMSE región 1:&quot;</span><span class="p">,</span> <span class="n">rmse_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RMSE región 2:&quot;</span><span class="p">,</span> <span class="n">rmse_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE región 0: 37.5794217150813
+RMSE región 1: 0.8930992867756168
+RMSE región 2: 40.02970873393434
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_profit</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">actuals</span><span class="p">):</span>
+    <span class="n">top_200_indices</span> <span class="o">=</span> <span class="n">predictions</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[</span><span class="o">-</span><span class="mi">200</span><span class="p">:]</span>
+    <span class="n">selected_actuals</span> <span class="o">=</span> <span class="n">actuals</span><span class="p">[</span><span class="n">top_200_indices</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">selected_actuals</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">*</span> <span class="mi">4500</span> <span class="o">-</span> <span class="mi">100000000</span>
+
+<span class="n">profit0</span> <span class="o">=</span> <span class="n">calculate_profit</span><span class="p">(</span><span class="n">preds_0</span><span class="p">,</span> <span class="n">valid_0</span><span class="p">)</span>
+<span class="n">profit1</span> <span class="o">=</span> <span class="n">calculate_profit</span><span class="p">(</span><span class="n">preds_1</span><span class="p">,</span> <span class="n">valid_1</span><span class="p">)</span>
+<span class="n">profit2</span> <span class="o">=</span> <span class="n">calculate_profit</span><span class="p">(</span><span class="n">preds_2</span><span class="p">,</span> <span class="n">valid_2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ganancias potenciales para 200 mejores pozos:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Región 0: $</span><span class="si">{</span><span class="n">profit0</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Región 1: $</span><span class="si">{</span><span class="n">profit1</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Región 2: $</span><span class="si">{</span><span class="n">profit2</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ganancias potenciales para 200 mejores pozos:
+
+Región 0: $33,208,260.43
+Región 1: $24,150,866.97
+Región 2: $27,103,499.64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">bootstrap_profit</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">actuals</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">predictions</span><span class="p">),</span> <span class="mi">500</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">sample_preds</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
+        <span class="n">sample_actuals</span> <span class="o">=</span> <span class="n">actuals</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
+        <span class="n">top_200</span> <span class="o">=</span> <span class="n">sample_actuals</span><span class="p">[</span><span class="n">sample_preds</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[</span><span class="o">-</span><span class="mi">200</span><span class="p">:]]</span>
+        <span class="n">profit</span> <span class="o">=</span> <span class="n">top_200</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">*</span> <span class="mi">4500</span> <span class="o">-</span> <span class="mi">100_000_000</span>
+        <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">profit</span><span class="p">)</span>
+        
+    <span class="n">profits</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">profits</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">profits</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">]),</span> <span class="p">(</span><span class="n">profits</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">mean_0</span><span class="p">,</span> <span class="n">conf_0</span><span class="p">,</span> <span class="n">risk_0</span> <span class="o">=</span> <span class="n">bootstrap_profit</span><span class="p">(</span><span class="n">preds_0</span><span class="p">,</span> <span class="n">valid_0</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+<span class="n">mean_1</span><span class="p">,</span> <span class="n">conf_1</span><span class="p">,</span> <span class="n">risk_1</span> <span class="o">=</span> <span class="n">bootstrap_profit</span><span class="p">(</span><span class="n">preds_1</span><span class="p">,</span> <span class="n">valid_1</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+<span class="n">mean_2</span><span class="p">,</span> <span class="n">conf_2</span><span class="p">,</span> <span class="n">risk_2</span> <span class="o">=</span> <span class="n">bootstrap_profit</span><span class="p">(</span><span class="n">preds_2</span><span class="p">,</span> <span class="n">valid_2</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Región 0 riesgo: </span><span class="si">{</span><span class="n">risk_0</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">% | Confianza: </span><span class="si">{</span><span class="n">conf_0</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2"> | Promedio: $</span><span class="si">{</span><span class="n">mean_0</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Región 1 riesgo: </span><span class="si">{</span><span class="n">risk_1</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">% | Confianza: </span><span class="si">{</span><span class="n">conf_1</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2"> | Promedio: $</span><span class="si">{</span><span class="n">mean_1</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Región 2 riesgo: </span><span class="si">{</span><span class="n">risk_2</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">% | Confianza: </span><span class="si">{</span><span class="n">conf_2</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2"> | Promedio: $</span><span class="si">{</span><span class="n">mean_2</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Región 0 riesgo: 6.90% | Confianza: [-371815.96262546 8426881.61128137] | Promedio: $3,961,649.85 
+
+Región 1 riesgo: 1.50% | Confianza: [1094757.21454802 7910055.13259456] | Promedio: $4,560,451.06 
+
+Región 2 riesgo: 7.60% | Confianza: [-585334.41050501 8411239.96708137] | Promedio: $4,044,038.67 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mostrar_resultados</span><span class="p">():</span>
+    <span class="n">resultados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s1">&#39;Región&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Beneficio promedio&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">mean_0</span><span class="p">,</span> <span class="n">mean_1</span><span class="p">,</span> <span class="n">mean_2</span><span class="p">],</span>
+        <span class="s1">&#39;Riesgo de pérdida (%)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">risk_0</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">risk_1</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">risk_2</span> <span class="o">*</span> <span class="mi">100</span><span class="p">],</span>
+        <span class="s1">&#39;IC 5%&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">conf_0</span><span class="p">[</span><span class="mf">0.05</span><span class="p">],</span> <span class="n">conf_1</span><span class="p">[</span><span class="mf">0.05</span><span class="p">],</span> <span class="n">conf_2</span><span class="p">[</span><span class="mf">0.05</span><span class="p">]],</span>
+        <span class="s1">&#39;IC 95%&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">conf_0</span><span class="p">[</span><span class="mf">0.95</span><span class="p">],</span> <span class="n">conf_1</span><span class="p">[</span><span class="mf">0.95</span><span class="p">],</span> <span class="n">conf_2</span><span class="p">[</span><span class="mf">0.95</span><span class="p">]],</span>
+    <span class="p">})</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">resultados</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Beneficio promedio&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+<span class="n">mostrar_resultados</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Región</th>
+      <th>Beneficio promedio</th>
+      <th>Riesgo de pérdida (%)</th>
+      <th>IC 5%</th>
+      <th>IC 95%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>4.560451e+06</td>
+      <td>1.5</td>
+      <td>1.094757e+06</td>
+      <td>7.910055e+06</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>4.044039e+06</td>
+      <td>7.6</td>
+      <td>-5.853344e+05</td>
+      <td>8.411240e+06</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3.961650e+06</td>
+      <td>6.9</td>
+      <td>-3.718160e+05</td>
+      <td>8.426882e+06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beneficios</span> <span class="o">=</span> <span class="p">[</span><span class="n">mean_0</span><span class="p">,</span> <span class="n">mean_1</span><span class="p">,</span> <span class="n">mean_2</span><span class="p">]</span>
+<span class="n">regiones</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Región 0&#39;</span><span class="p">,</span> <span class="s1">&#39;Región 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Región 2&#39;</span><span class="p">]</span>
+
+<span class="n">lower_bounds</span> <span class="o">=</span> <span class="p">[</span><span class="n">mean_0</span> <span class="o">-</span> <span class="n">conf_0</span><span class="p">[</span><span class="mf">0.05</span><span class="p">],</span> <span class="n">mean_1</span> <span class="o">-</span> <span class="n">conf_1</span><span class="p">[</span><span class="mf">0.05</span><span class="p">],</span> <span class="n">mean_2</span> <span class="o">-</span> <span class="n">conf_2</span><span class="p">[</span><span class="mf">0.05</span><span class="p">]]</span>
+<span class="n">upper_bounds</span> <span class="o">=</span> <span class="p">[</span><span class="n">conf_0</span><span class="p">[</span><span class="mf">0.95</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_0</span><span class="p">,</span> <span class="n">conf_1</span><span class="p">[</span><span class="mf">0.95</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_1</span><span class="p">,</span> <span class="n">conf_2</span><span class="p">[</span><span class="mf">0.95</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_2</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">regiones</span><span class="p">,</span> <span class="n">beneficios</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="p">[</span><span class="n">lower_bounds</span><span class="p">,</span> <span class="n">upper_bounds</span><span class="p">],</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkblue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Beneficio promedio ($)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Beneficio promedio con intervalo de confianza del 95%&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5d1d4290b0b77f9d20f07b73805ccc48e2ad858ea666f273c9420cc70a3b272e.png" src="_images/5d1d4290b0b77f9d20f07b73805ccc48e2ad858ea666f273c9420cc70a3b272e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">riesgos</span> <span class="o">=</span> <span class="p">[</span><span class="n">risk_0</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">risk_1</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">risk_2</span> <span class="o">*</span> <span class="mi">100</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">bars</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">regiones</span><span class="p">,</span> <span class="n">riesgos</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;salmon&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Riesgo de pérdida (%)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Riesgo estimado por región&quot;</span><span class="p">)</span>
+
+<span class="c1"># Etiquetas encima de las barras</span>
+<span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">bars</span><span class="p">:</span>
+    <span class="n">yval</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">yval</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">yval</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Límite de riesgo aceptable (2.5%)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/7666f1f4e6ffa11cfb27adf0dcb936db54e6b8ecbbb8bec16b437a1ae2dd9cd4.png" src="_images/7666f1f4e6ffa11cfb27adf0dcb936db54e6b8ecbbb8bec16b437a1ae2dd9cd4.png" />
+</div>
+</div>
+<p><strong>CONCLUSIONES</strong></p>
+<p>La región 1 fue la única que presentó una ganancia mayor en promedio por barril de $4,560,451.06 y un riesgo estimado del 1.5%, siendo menor al que se tenía contemplado (2.5%).</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="descripcion_datos.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Descripción de datos</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Carlos A. Ibarra Del Ángel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
